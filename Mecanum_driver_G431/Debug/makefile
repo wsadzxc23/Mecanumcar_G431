@@ -9,8 +9,11 @@ RM := rm -rf
 
 # 此处定义了参与生成的所有源
 -include sources.mk
--include Middlewares/FreeRTOS/subdir.mk
--include Drivers/STM32G4xx_HAL_Driver/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
+-include Drivers/STM32G4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/chassis/subdir.mk
 -include Core/Src/subdir.mk
