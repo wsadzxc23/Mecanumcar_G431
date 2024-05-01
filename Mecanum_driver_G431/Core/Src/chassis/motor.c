@@ -57,8 +57,8 @@ void motors_hw_init(void)
 void motor_run( motor_id_t idx, motor_ctl_t act)
 {
 	motor_t *motor = get_motor(idx);
-	int dir1_pin_state = 0;
-	int dir2_pin_state = 0;
+	uint32_t dir1_pin_state = 0;
+	uint32_t dir2_pin_state = 0;
 	uint32_t ccr = 0;
 
 	act.speed = act.speed >= 100 ? 100:act.speed;
@@ -78,8 +78,8 @@ void motor_run( motor_id_t idx, motor_ctl_t act)
 			break;
 	}
 	HAL_TIM_Base_Start(motor->hw.timer);
-	HAL_GPIO_WritePin(motor->hw.dir1_Port, motor->hw.dir1_Pin, 0);
-	HAL_GPIO_WritePin(motor->hw.dir2_Port, motor->hw.dir2_Pin, 1);
+	HAL_GPIO_WritePin(motor->hw.dir1_Port, motor->hw.dir1_Pin, dir1_pin_state);
+	HAL_GPIO_WritePin(motor->hw.dir2_Port, motor->hw.dir2_Pin, dir2_pin_state);
 	__HAL_TIM_SET_COMPARE(motor->hw.timer, motor->hw.pwm_channel, ccr);
 	HAL_TIM_PWM_Start(motor->hw.timer, motor->hw.pwm_channel);
 }

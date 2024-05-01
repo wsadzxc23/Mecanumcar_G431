@@ -4,8 +4,8 @@
 
 #define MOTOR_NUM		4
 /* 使底盘向前运动的电机方向控制引脚掩码   BIT0: DIR1, BIT1:DIR2 */
-#define	PIN_MASK_REVERSE	(0<<1 || 1<<0)
-#define	PIN_MASK_FORWARD	(1<<1 || 0<<0)
+#define	PIN_MASK_REVERSE	((0x0<<1 | 0x1<<0))
+#define	PIN_MASK_FORWARD	((0x1<<1 | 0x0<<0))
 
 #define MOTOR_PWM_TIMER		htim1
 
