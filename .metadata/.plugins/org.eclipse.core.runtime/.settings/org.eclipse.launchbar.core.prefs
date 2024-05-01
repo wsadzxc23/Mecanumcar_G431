@@ -1,9 +1,0 @@
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u672C\u5730/arch=x86_64
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u672C\u5730/name=\u672C\u5730
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u672C\u5730/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:\u65B0\u5EFA\u914D\u7F6E,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Mecanum_driver_G431 Debug
-eclipse.preferences.version=1
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Mecanum_driver_G431\ Debug/activeLaunchMode=run
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Mecanum_driver_G431\ Debug/activeLaunchTarget=null\:---
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:\u65B0\u5EFA\u914D\u7F6E/activeLaunchMode=debug
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:\u65B0\u5EFA\u914D\u7F6E/activeLaunchTarget=null\:---
