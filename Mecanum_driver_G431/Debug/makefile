@@ -66,7 +66,7 @@ main-build: Mecanum_driver_G431.elf secondary-outputs
 
 # 工具调用
 Mecanum_driver_G431.elf Mecanum_driver_G431.map: $(OBJS) $(USER_OBJS) /home/wang/workspace/Mecanum_Car/workspace/Mecanumcar_G431/Mecanum_driver_G431/STM32G431RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Mecanum_driver_G431.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/wang/workspace/Mecanum_Car/workspace/Mecanumcar_G431/Mecanum_driver_G431/STM32G431RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Mecanum_driver_G431.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "Mecanum_driver_G431.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/wang/workspace/Mecanum_Car/workspace/Mecanumcar_G431/Mecanum_driver_G431/STM32G431RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Mecanum_driver_G431.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo '已结束构建目标： $@'
 	@echo ' '
 

@@ -21,6 +21,35 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
+#include "stdio.h"
+#ifdef __GNUC__
+  /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
+     set to 'Yes') calls __io_putchar() */
+  #define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#else
+  #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#endif /* __GNUC__ */
+
+PUTCHAR_PROTOTYPE
+{
+  /* Place your implementation of fputc here */
+  /* e.g. write a character to the EVAL_COM1 and Loop until the end of transmission */
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xFFFF);
+ 
+  return ch;
+}
+
+
+int _write(int file, char *ptr, int len)
+{
+    int DataIdx;
+ 
+    for (DataIdx = 0; DataIdx < len; DataIdx++) {
+        __io_putchar(*ptr++);
+    }
+    return len;
+}
+
 
 /* USER CODE END 0 */
 

@@ -35,7 +35,6 @@ extern "C" {
 #include "strings.h"
 #include "stdlib.h"
 
-#include "chassis/motor.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

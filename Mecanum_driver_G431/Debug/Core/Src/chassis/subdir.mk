@@ -5,12 +5,15 @@
 
 # 将这些工具调用的输入和输出添加到构建变量 
 C_SRCS += \
+../Core/Src/chassis/encoder.c \
 ../Core/Src/chassis/motor.c 
 
 OBJS += \
+./Core/Src/chassis/encoder.o \
 ./Core/Src/chassis/motor.o 
 
 C_DEPS += \
+./Core/Src/chassis/encoder.d \
 ./Core/Src/chassis/motor.d 
 
 
@@ -21,7 +24,7 @@ Core/Src/chassis/%.o Core/Src/chassis/%.su Core/Src/chassis/%.cyclo: ../Core/Src
 clean: clean-Core-2f-Src-2f-chassis
 
 clean-Core-2f-Src-2f-chassis:
-	-$(RM) ./Core/Src/chassis/motor.cyclo ./Core/Src/chassis/motor.d ./Core/Src/chassis/motor.o ./Core/Src/chassis/motor.su
+	-$(RM) ./Core/Src/chassis/encoder.cyclo ./Core/Src/chassis/encoder.d ./Core/Src/chassis/encoder.o ./Core/Src/chassis/encoder.su ./Core/Src/chassis/motor.cyclo ./Core/Src/chassis/motor.d ./Core/Src/chassis/motor.o ./Core/Src/chassis/motor.su
 
 .PHONY: clean-Core-2f-Src-2f-chassis
 
