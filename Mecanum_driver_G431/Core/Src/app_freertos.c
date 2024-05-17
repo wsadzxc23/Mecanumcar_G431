@@ -145,7 +145,7 @@ void motorTask(void *argument)
   for(;;)
   {
 	  state = motor_refresh_state(MotorA);
-	  printf("ang_vel = %f, line_vel = %f\r\n", state->ang_vel, state->line_vel);
+    printf("ang_vel = %f, line_vel = %f\r\n", state->ang_vel, state->line_vel);
 	  HAL_GPIO_TogglePin(SYS_LED_GPIO_Port, SYS_LED_Pin);
 	  osDelay(100);
 

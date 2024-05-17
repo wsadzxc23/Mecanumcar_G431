@@ -24,11 +24,10 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-#include "chassis/motor.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "chassis/motor.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -113,7 +112,7 @@ int main(void)
   MX_FREERTOS_Init();
 
   /* Start scheduler */
-   osKernelStart();
+  osKernelStart();
 
   /* We should never get here as control is now taken by the scheduler */
 
