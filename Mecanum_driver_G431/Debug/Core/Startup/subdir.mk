@@ -7,11 +7,11 @@
 S_SRCS += \
 ../Core/Startup/startup_stm32g431rbtx.s 
 
-OBJS += \
-./Core/Startup/startup_stm32g431rbtx.o 
-
 S_DEPS += \
 ./Core/Startup/startup_stm32g431rbtx.d 
+
+OBJS += \
+./Core/Startup/startup_stm32g431rbtx.o 
 
 
 # 每个子目录必须为构建它所贡献的源提供规则

@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c 
 
-OBJS += \
-./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o 
-
 C_DEPS += \
 ./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.d 
+
+OBJS += \
+./Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o 
 
 
 # 每个子目录必须为构建它所贡献的源提供规则

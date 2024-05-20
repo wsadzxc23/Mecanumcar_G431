@@ -8,13 +8,13 @@ C_SRCS += \
 ../Core/Src/chassis/encoder.c \
 ../Core/Src/chassis/motor.c 
 
-OBJS += \
-./Core/Src/chassis/encoder.o \
-./Core/Src/chassis/motor.o 
-
 C_DEPS += \
 ./Core/Src/chassis/encoder.d \
 ./Core/Src/chassis/motor.d 
+
+OBJS += \
+./Core/Src/chassis/encoder.o \
+./Core/Src/chassis/motor.o 
 
 
 # 每个子目录必须为构建它所贡献的源提供规则

@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c 
 
-OBJS += \
-./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o 
-
 C_DEPS += \
 ./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.d 
+
+OBJS += \
+./Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o 
 
 
 # 每个子目录必须为构建它所贡献的源提供规则

@@ -7,11 +7,11 @@
 C_SRCS += \
 ../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c 
 
-OBJS += \
-./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o 
-
 C_DEPS += \
 ./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.d 
+
+OBJS += \
+./Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o 
 
 
 # 每个子目录必须为构建它所贡献的源提供规则
