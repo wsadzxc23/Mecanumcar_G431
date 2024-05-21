@@ -38,6 +38,7 @@ CPP_DEPS :=
 
 # 此处必须描述包含源文件的每个子目录
 SUBDIRS := \
+Core/Inc \
 Core/Src \
 Core/Src/chassis \
 Core/Startup \
