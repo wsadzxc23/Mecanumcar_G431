@@ -26,6 +26,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "chassis/motor.h"
+#include "rosserial/rosserial.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -137,15 +138,17 @@ void motorTask(void *argument)
 	int i = 0;
 	motor_ctl_t act = {MT_FORWARD, 10};
   motor_state_t* state = NULL;
-  motor_run(MotorA, act);
-  motor_run(MotorB, act);
-  motor_run(MotorC, act);
-  motor_run(MotorD, act);
+  setup();
+//  motor_run(MotorA, act);
+//  motor_run(MotorB, act);
+//  motor_run(MotorC, act);
+//  motor_run(MotorD, act);
   /* Infinite loop */
   for(;;)
   {
-	  state = motor_refresh_state(MotorA);
-    printf("ang_vel = %f, line_vel = %f\r\n", state->ang_vel, state->line_vel);
+    loop();
+//	  state = motor_refresh_state(MotorA);
+//    printf("ang_vel = %f, line_vel = %f\r\n", state->ang_vel, state->line_vel);
 	  HAL_GPIO_TogglePin(SYS_LED_GPIO_Port, SYS_LED_Pin);
 	  osDelay(100);
 

@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "motor.h": "c",
+        "main.h": "c",
+        "*.tcc": "cpp",
+        "exception": "cpp",
+        "memory_resource": "cpp",
+        "fstream": "cpp",
+        "iosfwd": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "unordered_map": "cpp",
+        "istream": "cpp",
+        "numeric": "cpp"
+    }
+}
