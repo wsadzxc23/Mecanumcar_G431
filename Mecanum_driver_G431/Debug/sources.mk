@@ -38,9 +38,10 @@ CPP_DEPS :=
 
 # 此处必须描述包含源文件的每个子目录
 SUBDIRS := \
-Core/Inc \
 Core/Src \
 Core/Src/chassis \
+Core/Src/ros \
+Core/Src/roslib \
 Core/Startup \
 Drivers/STM32G4xx_HAL_Driver/Src \
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
