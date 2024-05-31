@@ -13,6 +13,7 @@
         "streambuf": "cpp",
         "unordered_map": "cpp",
         "istream": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "encoder.h": "c"
     }
 }
